@@ -10,5 +10,13 @@ body {
 .cotainer { 
     width: 95%;
     max-width: 1000px;
-    margin: 0 ;
+    margin: 0 ;   
+}
+
+.border {
+    border-style: solid;
+    border-radius: 20px;
+    border-color: #505050;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
