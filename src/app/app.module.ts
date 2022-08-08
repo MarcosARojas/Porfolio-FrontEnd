@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CabezeraComponent } from './componentes/cabezera/cabezera.component';
-import { InfoUserComponent } from './componentes/info-user/info-user.component';
 import { AcercaDeUserComponent } from './componentes/acerca-de-user/acerca-de-user.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
@@ -15,7 +14,6 @@ import { NavComponent } from './componentes/nav/nav.component';
   declarations: [
     AppComponent,
     CabezeraComponent,
-    InfoUserComponent,
     AcercaDeUserComponent,
     ExperienciaComponent,
     EducacionComponent,

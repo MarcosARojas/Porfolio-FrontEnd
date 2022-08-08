@@ -10,46 +10,6 @@
     right: 0;
     z-index: 1;
 }
-.nav a {
-    color: white;
-    text-decoration: none;
-}
-
-.name {
-    font-size: 1.2em;
-    line-height: 0.3em;
-    letter-spacing: 0px;
-}
-
-.organization-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-header ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.nav-header ul li {
-    display: inline-block;
-}
-
-.nav-header ul li a {
-    display: block;
-    padding: 0.5rem 1rem;
-    transition: all 0.4s linear;
-    border-radius: 5px;
-}
-
-.nav-header ul li a:hover {
-    background: #4f4f4f;
-}
-
-.button {
-    background: #333;
-    color: #000000;
-    border-radius: 10px;
+.btn-white {
+    color: rgb(170, 170, 170);
 }
