@@ -1,0 +1,42 @@
+.centrar{
+    padding: 0 0 0 0;
+}
+
+.img-banner {
+    border-radius: 15px;
+    border-style: solid;
+    border-width: -2px;
+    border-color: #4f4f4f;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    position: relative;
+}
+
+.img-user {
+    border-radius: 50%;
+    border-style: solid;
+    border-width: -1px;
+    border-color: #4f4f4f;
+    padding-left: 0;
+    padding-right: 0;
+    width: 17.5%;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+}
+
+
+.modulo1 {
+    position: relative;
+    left: 15%;
+    top: 5%;
+}
+li {
+    display: inline-block;
+    margin-inline: 15px;
+}
+.contorno {
+    border-style: solid;
+    border-color: #4f4f4f;
+}
