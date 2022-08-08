@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: Georgia, Times, serif;
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+
+.cotainer { 
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 ;
+}
