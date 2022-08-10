@@ -30,12 +30,12 @@
 
 .modulo1 {
     position: relative;
-    left: 15%;
+    left: 5%;
     top: 1em;
 }
 li {
     display: inline-block;
-    margin-inline: 15px;
+    margin-inline-start: 7.5em;
 }
 .contorno {
     border-style: solid;
