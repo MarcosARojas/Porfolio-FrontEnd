@@ -12,3 +12,36 @@
     align-items: center;
     
 }
+
+.img-banner {
+    width: 100%;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: -2px;
+    border-color: #4f4f4f;
+    padding-left: 0;
+    padding-right: 0;
+    background-image: url(https://previews.123rf.com/images/vitaliyvill/vitaliyvill1903/vitaliyvill190300009/124366853-vector-horizontal-landscape-with-fog-forest-good-for-wallpaper-background-banner-cover-poster.jpg?fj=1);
+}
+
+.img-user {
+    border-radius: 50%;
+    border-style: solid;
+    border-width: -1px;
+    border-color: #4f4f4f;
+    padding-left: 0;
+    padding-right: 0;
+    width: 12.5em;
+}
+
+.espaciador {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.letra-banner {
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+
+    -webkit-text-stroke: 0.5px #000000;
+}
