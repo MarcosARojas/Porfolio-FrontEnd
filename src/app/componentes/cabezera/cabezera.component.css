@@ -1,5 +1,6 @@
 .centrar{
     padding: 0 0 0 0;
+    padding-bottom: 1em;
 }
 
 .img-banner {
@@ -30,7 +31,7 @@
 .modulo1 {
     position: relative;
     left: 15%;
-    top: 5%;
+    top: 1em;
 }
 li {
     display: inline-block;
