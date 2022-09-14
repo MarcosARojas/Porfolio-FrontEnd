@@ -22,6 +22,13 @@ import { CrearEducacionComponent } from './componentes/pantallas/crear-educacion
 import { CrearExperienciaComponent } from './componentes/pantallas/crear-experiencia/crear-experiencia.component';
 import { CrearProyectoComponent } from './componentes/pantallas/crear-proyecto/crear-proyecto.component';
 import { EdicionProyectoComponent } from './componentes/pantallas/edicion-proyecto/edicion-proyecto.component';
+import { CrearSkillComponent } from './componentes/pantallas/crear-skill/crear-skill.component';
+import { EdicionSkillComponent } from './componentes/pantallas/edicion-skill/edicion-skill.component';
+import { EdicionInfoUserComponent } from './componentes/pantallas/edicion-info-user/edicion-info-user.component';
+import { CrearInfoUserComponent } from './componentes/pantallas/crear-info-user/crear-info-user.component';
+import { EdicionUserComponent } from './componentes/pantallas/edicion-user/edicion-user.component';
+import { AvisoNotengoEsaRedComponent } from './componentes/pantallas/aviso-notengo-esa-red/aviso-notengo-esa-red.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -46,9 +53,16 @@ import { EdicionProyectoComponent } from './componentes/pantallas/edicion-proyec
     CrearExperienciaComponent,
     CrearProyectoComponent,
     EdicionProyectoComponent,
+    CrearSkillComponent,
+    EdicionSkillComponent,
+    EdicionInfoUserComponent,
+    CrearInfoUserComponent,
+    EdicionUserComponent,
+    AvisoNotengoEsaRedComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
