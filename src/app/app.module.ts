@@ -9,7 +9,6 @@ import { EducacionComponent } from './componentes/educacion/educacion.component'
 import { SkillsComponent } from './componentes/skills/skills.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { NavComponent } from './componentes/nav/nav.component';
-import { PantallaInicioUserComponent } from './componentes/pantalla-inicio-user/pantalla-inicio-user.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { ButtonFacebookComponent } from './componentes/botones/button-facebook/button-facebook.component';
 import { ButtonInstagramComponent } from './componentes/botones/button-instagram/button-instagram.component';
@@ -26,7 +25,6 @@ import { CrearSkillComponent } from './componentes/pantallas/crear-skill/crear-s
 import { EdicionSkillComponent } from './componentes/pantallas/edicion-skill/edicion-skill.component';
 import { EdicionInfoUserComponent } from './componentes/pantallas/edicion-info-user/edicion-info-user.component';
 import { CrearInfoUserComponent } from './componentes/pantallas/crear-info-user/crear-info-user.component';
-import { EdicionUserComponent } from './componentes/pantallas/edicion-user/edicion-user.component';
 import { AvisoNotengoEsaRedComponent } from './componentes/pantallas/aviso-notengo-esa-red/aviso-notengo-esa-red.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -40,7 +38,6 @@ import { HttpClientModule } from '@angular/common/http';
     SkillsComponent,
     ProyectosComponent,
     NavComponent,
-    PantallaInicioUserComponent,
     FooterComponent,
     ButtonFacebookComponent,
     ButtonInstagramComponent,
@@ -57,12 +54,11 @@ import { HttpClientModule } from '@angular/common/http';
     EdicionSkillComponent,
     EdicionInfoUserComponent,
     CrearInfoUserComponent,
-    EdicionUserComponent,
     AvisoNotengoEsaRedComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
