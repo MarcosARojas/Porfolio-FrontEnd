@@ -1,10 +1,10 @@
-<div class="grid text-center container img-banner separador-superior">
+<div class="grid text-center container img-banner separador-superior" style="background-image: url({{user.urlBanner}});">
   <div class="g-col-6"><div class="row ">
-    <div class="col espaciador"><img class="img-user" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Portada user"></div>
+    <div class="col espaciador"><img class="img-user" src={{user.urlPerfil}} alt="Portada user"></div>
     <div class="grid text-center" style="--bs-columns: 18; --bs-gap: .5rem;">
-      <div style="grid-column: span 14;"><div class="col letra-banner"> <h2> {{persona.apellido}}{{persona.nombre}} </h2> </div>
+      <div style="grid-column: span 14;"><div class="col letra-banner"> <p>{{user.apellido}} {{user.nombre}} </p> </div>
       <div class="col"> </div>
-      <div class="col letra-banner"> <h3> {{persona.titulo}} </h3> </div>
+      <div class="col letra-banner"> <p> {{user.titulo}} </p> </div>
       <div class="col"> </div></div>
     </div>
 </div>

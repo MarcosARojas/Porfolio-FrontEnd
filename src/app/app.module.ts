@@ -24,9 +24,8 @@ import { EdicionProyectoComponent } from './componentes/pantallas/edicion-proyec
 import { CrearSkillComponent } from './componentes/pantallas/crear-skill/crear-skill.component';
 import { EdicionSkillComponent } from './componentes/pantallas/edicion-skill/edicion-skill.component';
 import { EdicionInfoUserComponent } from './componentes/pantallas/edicion-info-user/edicion-info-user.component';
-import { CrearInfoUserComponent } from './componentes/pantallas/crear-info-user/crear-info-user.component';
-import { AvisoNotengoEsaRedComponent } from './componentes/pantallas/aviso-notengo-esa-red/aviso-notengo-esa-red.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -53,12 +52,11 @@ import { HttpClientModule } from '@angular/common/http';
     CrearSkillComponent,
     EdicionSkillComponent,
     EdicionInfoUserComponent,
-    CrearInfoUserComponent,
-    AvisoNotengoEsaRedComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

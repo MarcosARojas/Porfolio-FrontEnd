@@ -1,36 +1,41 @@
 
-<div class="modal fade" id="staticBackdrop-inicio-user" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Inicio de Secion</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Usuario / Correo</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie.</div>
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-              <div id="emailHelp" class="form-text">Nunca comparta su contraseña con nadie.</div>
-            </div>
-            <!-- <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Recordar Usuario</label>
-            </div> -->
-            <button type="submit" class="btn btn-primary">Iniciar sesion</button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Crear Usuario</button>
-        </div>
+<!-- Button trigger modal
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inicioDeSesion">
+    BOTON DE CREAR SKILL
+  </button>
+-->
+<!-- Modal -->
+<div class="modal fade" id="inicioDeSesion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Inicio de Secion</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Usuario / Correo</label>
+            <input type="email" class="form-control" id="nombreUsuario" />
+            <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" />
+            <div id="emailHelp" class="form-text">Nunca comparta su contraseña con nadie.</div>
+          </div>
+          <!-- <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Recordar Usuario</label>
+                </div> -->
+          <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Crear Usuario</button>
       </div>
     </div>
   </div>
-  
-  
+</div>

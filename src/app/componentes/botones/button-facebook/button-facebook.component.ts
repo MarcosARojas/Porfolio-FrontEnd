@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { persona } from 'src/app/Model/persona.model';
-import { PersonaService } from 'src/app/service/persona.service';
+import { user } from 'src/app/Model/user.model';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-button-facebook',
@@ -8,12 +8,13 @@ import { PersonaService } from 'src/app/service/persona.service';
   styleUrls: ['./button-facebook.component.css']
 })
 export class ButtonFacebookComponent implements OnInit {
-  persona: persona= new persona("", "", "","", "", "", "", "", "", "")
+  user: user= new user("", "", "","", "", "", "", "", "", "", "")
+  
 
-  constructor(public personaService: PersonaService) { }
+  constructor(public userService: UserService) { }
 
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data=>{this.persona =data});
+    this.userService.getUser().subscribe(data => {this.user = data});
   }
 
 }
