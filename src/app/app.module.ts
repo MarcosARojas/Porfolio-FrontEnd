@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CabezeraComponent } from './componentes/cabezera/cabezera.component';
 import { AcercaDeUserComponent } from './componentes/acerca-de-user/acerca-de-user.component';
@@ -24,8 +24,7 @@ import { EdicionProyectoComponent } from './componentes/pantallas/edicion-proyec
 import { CrearSkillComponent } from './componentes/pantallas/crear-skill/crear-skill.component';
 import { EdicionSkillComponent } from './componentes/pantallas/edicion-skill/edicion-skill.component';
 import { EdicionInfoUserComponent } from './componentes/pantallas/edicion-info-user/edicion-info-user.component';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { HttpClien, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [

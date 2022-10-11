@@ -14,8 +14,6 @@ export class UserService {
   public getUser(): Observable<user>{
     return this.http.get<user>(this.URL+"user/traer/");
   }
-
-  
 }
 
 
