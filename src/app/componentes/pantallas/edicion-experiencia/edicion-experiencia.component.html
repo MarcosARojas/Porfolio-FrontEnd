@@ -12,29 +12,40 @@
                 <h5 class="modal-title" id="staticBackdropLabel">Editar Experiencia</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
             <div class="modal-body">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Empresa </label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="info anterior">
+                    <label for="empresa" class="form-label">Empresa </label>
+                    <input type="text" class="form-control" id="empresa" 
+                    placeholder="info anterior" [(ngModel)]="expeLab.empresa" required>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Puesto</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="info anterior">
+                    <label for="puesto" class="form-label">Puesto</label>
+                    <input type="text" class="form-control" id="puesto"
+                     placeholder="info anterior" [(ngModel)]="expeLab.puesto" required>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Link de foto de la institucion</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="info anterior">
+                    <label for="descripcion" class="form-label">Descripcion</label>
+                    <input type="text" class="form-control" id="descripcion" 
+                    placeholder="info anterior" [(ngModel)]="expeLab.descripcion" required>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Periodo</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="info anterior">
+                    <label for="periodo" class="form-label">Periodo</label>
+                    <input type="text" class="form-control" id="periodo" 
+                    placeholder="info anterior" [(ngModel)]="expeLab.periodo" required>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary"> Guardar </button>
                 </div>
 
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Understood</button>
-            </div>
+
+            
+
+        </form>
+            
         </div>
     </div>
 </div>

@@ -15,16 +15,17 @@ import { ButtonInstagramComponent } from './componentes/botones/button-instagram
 import { ButtonLinkedinComponent } from './componentes/botones/button-linkedin/button-linkedin.component';
 import { ButtonGithubComponent } from './componentes/botones/button-github/button-github.component';
 import { EdicionExperienciaComponent } from './componentes/pantallas/edicion-experiencia/edicion-experiencia.component';
-import { InicioUserComponent } from './componentes/pantallas/inicio-user/inicio-user.component';
 import { EdicionEducacionComponent } from './componentes/pantallas/edicion-educacion/edicion-educacion.component';
 import { CrearEducacionComponent } from './componentes/pantallas/crear-educacion/crear-educacion.component';
 import { CrearExperienciaComponent } from './componentes/pantallas/crear-experiencia/crear-experiencia.component';
 import { CrearProyectoComponent } from './componentes/pantallas/crear-proyecto/crear-proyecto.component';
 import { EdicionProyectoComponent } from './componentes/pantallas/edicion-proyecto/edicion-proyecto.component';
+import { InicioUserComponent } from './componentes/pantallas/inicio-user/inicio-user.component';
 import { CrearSkillComponent } from './componentes/pantallas/crear-skill/crear-skill.component';
 import { EdicionSkillComponent } from './componentes/pantallas/edicion-skill/edicion-skill.component';
 import { EdicionInfoUserComponent } from './componentes/pantallas/edicion-info-user/edicion-info-user.component';
-import { HttpClien, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { interceptorProvider } from './service/interceptor-service';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,7 @@ import { HttpClien, HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ interceptorProvider ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

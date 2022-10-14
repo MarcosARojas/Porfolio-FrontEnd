@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { user } from 'src/app/Model/user.model';
-import { UserService } from 'src/app/service/user.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-nav',
@@ -8,14 +8,25 @@ import { UserService } from 'src/app/service/user.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  user: user= new user("", "", "","", "", "", "", "", "", "", "")
+  isLogged = false;
   
 
-  constructor(public userService: UserService) { }
+  constructor(public tokenService: TokenService) { }
 
   ngOnInit(): void {
-    this.userService.getUser().subscribe(data => {this.user = data});
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    };
   }
 
-}
+  onLogOut(): void {
+   this.tokenService.logOut();
+   window.location.reload(); 
+  }
 
+  onLogin(): void { 
+   }
+
+}

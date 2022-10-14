@@ -1,18 +1,16 @@
-export class experiencia{
+export class Experiencia{
     
     id?: number;
-    puesto: String;
-    empresa: String;
-    periodo: String;
-    descripcion: String;
-    urlfoto: String;
+    puesto: string;
+    empresa: string;
+    periodo: string;
+    descripcion: string;
     
 
-    constructor(puesto: String, empresa: String, periodo: String, descripcion: String, urlfoto: String){
+    constructor(puesto: string, empresa: string, periodo: string, descripcion: string){
                 this.puesto = puesto;
                 this.empresa = empresa;
                 this.periodo = periodo;
                 this.descripcion = descripcion;
-                this.urlfoto = urlfoto;
             }
 }

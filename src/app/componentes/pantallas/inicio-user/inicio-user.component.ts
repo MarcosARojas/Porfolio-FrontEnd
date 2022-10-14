@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { auto } from '@popperjs/core';
 import { LogginUsuario } from 'src/app/Model/loggin-usuario';
 import { AuthService } from 'src/app/service/auth.service';
 import { TokenService } from 'src/app/service/token.service';
@@ -31,12 +32,14 @@ export class InicioUserComponent implements OnInit {
   onLogin(): void {
     this.logginUsuario= new LogginUsuario(this.nombreUsuario, this.password);
     this.authServise.login(this.logginUsuario).subscribe(data => {
-          this.isLogged=true
+          this.isLogged=true;
           this.isLogginnFail= false;
           this.tokenService.setToken(data.token);
           this.tokenService.setUserName(data.nombreUsuario);
           this.tokenService.setAuthorities(data.authorities);
           this.roles = data.authorities;
+          window.location.reload();
+
       }, err =>{
         this.isLogged=false;
         this.isLogginnFail=true;
@@ -45,7 +48,4 @@ export class InicioUserComponent implements OnInit {
       });
   }
 
-
-
-  
 }
