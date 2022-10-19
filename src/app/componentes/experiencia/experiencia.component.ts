@@ -12,7 +12,8 @@ export class ExperienciaComponent implements OnInit {
   expe: Experiencia[]= [];
   
 
-  constructor(private experienciaService: ExperienciaService, private tokenService: TokenService) { }
+  constructor(private experienciaService: ExperienciaService, 
+    private tokenService: TokenService) { }
 
   isLogged = false;
 
@@ -30,7 +31,7 @@ export class ExperienciaComponent implements OnInit {
   } 
 
   delete(id?: number){
-    if(id != undefined){
+   if(id != undefined){
       this.experienciaService.delete(id).subscribe(
         data => {
           this.cargarExperiencia();
@@ -40,4 +41,6 @@ export class ExperienciaComponent implements OnInit {
       )
     }
   }
+
+
 }
