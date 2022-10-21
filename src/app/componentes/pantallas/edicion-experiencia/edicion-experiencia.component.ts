@@ -14,7 +14,7 @@ export class EdicionExperienciaComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-   /* const id = this.activatedRoute.snapshot.params['id'];
+    const id =this.expeLab.id;
     this.experienciaService.details(id).subscribe(
       data => {
         this.expeLab = data;
@@ -23,18 +23,12 @@ export class EdicionExperienciaComponent implements OnInit {
         alert("hubo un error por aca");
         this.router.navigate(['']);
       }
-    )*/
+    )
   }
 
   onUpdate(): void {
-    const id = this.activatedRoute.snapshot.params['id'];
-    this.experienciaService.update(id ,this.expeLab).subscribe(
-      data => {
-        this.router.navigate(['']);
-      }, err => { 
-        alert("No se pudo");
-        this.router.navigate(['']);
-  })
+    const id =this.expeLab.id;
+    this.experienciaService.update(id ,this.expeLab)
   }
 
 }

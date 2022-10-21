@@ -3,8 +3,8 @@
     BOTON DE editar Educacion
   </button>
 -->
-<!-- Modal -->
-<div class="modal fade" id="editarExperiencia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+<!-- Modal 
+<div class="modal fade" id="birrador" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -15,30 +15,30 @@
             <div class="modal-body">
                 <div class="container">
                 <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="mb-3">
+                    <div class="">
+                        <label for="puesto" class="form-label">Puesto</label>
+                        <input type="text" class="form-control" id="puesto"
+                         placeholder="info anterior" [(ngModel)]="expeLab.puesto" name="puesto" required>
+                    </div>
+                <div class="">
                     <label for="empresa" class="form-label">Empresa </label>
                     <input type="text" class="form-control" id="empresa" 
-                    placeholder="info anterior"  >
+                    placeholder="info anterior" [(ngModel)]="expeLab.empresa" name="empresa" required >
                 </div>
-                <div class="mb-3">
-                    <label for="puesto" class="form-label">Puesto</label>
-                    <input type="text" class="form-control" id="puesto"
-                     placeholder="info anterior" >
-                </div>
-                <div class="mb-3">
+                <div class="">
                     <label for="descripcion" class="form-label">Descripcion</label>
                     <input type="text" class="form-control" id="descripcion" 
-                    placeholder="" >
+                    placeholder="" [(ngModel)]="expeLab.descripcion" name="descripcion" required>
                 </div>
-                <div class="mb-3">
+                <div class="">
                     <label for="periodo" class="form-label">Periodo</label>
                     <input type="text" class="form-control" id="periodo" 
-                    placeholder="info anterior"  >
+                    placeholder="info anterior"  [(ngModel)]="expeLab.periodo" name="periodo" required>
                 </div>
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary" 
+                    <button type="submit" class="btn btn-primary" (click)="onUpdate()"
                     > Guardar </button>
                 </div>
                 </form>
@@ -49,42 +49,9 @@
     </div>
 </div>
 
-<!-- [(ngModel)]="expeLab.descripcion" required 
+[(ngModel)]="expeLab.descripcion" required
 [(ngModel)]="expeLab.empresa"
 [(ngModel)]="expeLab.puesto"
 [(ngModel)]="expeLab.descripcion"
 [(ngModel)]="expeLab.periodo"
 -->
-
-
-<div class="container" *ngIf="expeLab">
-    <div class="row">
-    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-    <div class="mb-3">
-        <label for="empresa" class="form-label">Empresa </label>
-        <input type="text" class="form-control" id="empresa" 
-        placeholder="info anterior" [(ngModel)]="expeLab.empresa" required >
-    </div>
-    <div class="mb-3">
-        <label for="puesto" class="form-label">Puesto</label>
-        <input type="text" class="form-control" id="puesto"
-         placeholder="info anterior" >
-    </div>
-    <div class="mb-3">
-        <label for="descripcion" class="form-label">Descripcion</label>
-        <input type="text" class="form-control" id="descripcion" 
-        placeholder="{{expeLab.descripcion}}" [(ngModel)]="expeLab.descripcion" required>
-    </div>
-    <div class="mb-3">
-        <label for="periodo" class="form-label">Periodo</label>
-        <input type="text" class="form-control" id="periodo" 
-        placeholder="info anterior" [(ngModel)]="expeLab.periodo" required >
-    </div>
-
-    <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary" > Guardar </button>
-    </div>
-    </form>
-</div>  
-</div>

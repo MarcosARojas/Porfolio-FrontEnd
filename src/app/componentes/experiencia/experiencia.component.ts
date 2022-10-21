@@ -9,10 +9,11 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  expe: Experiencia[]= [];
-  
+  expe: Experiencia[] = [];
+  expeLab: Experiencia = null;
 
-  constructor(private experienciaService: ExperienciaService, 
+
+  constructor(private experienciaService: ExperienciaService,
     private tokenService: TokenService) { }
 
   isLogged = false;
@@ -22,16 +23,18 @@ export class ExperienciaComponent implements OnInit {
     this.cargarExperiencia();
     if (this.tokenService.getToken()) {
       this.isLogged = true;
-  } else {
-    this.isLogged = false;}
+    } else {
+      this.isLogged = false;
+    }
+    
   }
 
   cargarExperiencia(): void {
-    this.experienciaService.lista().subscribe(data => {this.expe = data});
-  } 
+    this.experienciaService.lista().subscribe(data => { this.expe = data });
+  }
 
-  delete(id?: number){
-   if(id != undefined){
+  delete(id: any) {
+    if (id != undefined) {
       this.experienciaService.delete(id).subscribe(
         data => {
           this.cargarExperiencia();
@@ -41,6 +44,12 @@ export class ExperienciaComponent implements OnInit {
       )
     }
   }
+  details(id?: number) {
+    this.experienciaService.details(id).subscribe(data2 => { this.expeLab = data2 });
+  }
 
-
+  onUpdate(): void {
+    const id = this.expeLab.id;
+    this.experienciaService.update(id, this.expeLab)
+  }
 }
