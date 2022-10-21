@@ -33,7 +33,7 @@ export class ExperienciaComponent implements OnInit {
     this.experienciaService.lista().subscribe(data => { this.expe = data });
   }
 
-  delete(id: any) {
+  delete(id?: number) {
     if (id != undefined) {
       this.experienciaService.delete(id).subscribe(
         data => {
@@ -44,8 +44,10 @@ export class ExperienciaComponent implements OnInit {
       )
     }
   }
+
+  /* Metodos extra Revisar */
   details(id?: number) {
-    this.experienciaService.details(id).subscribe(data2 => { this.expeLab = data2 });
+    this.experienciaService.details(id).subscribe(data => { this.expeLab = data });
   }
 
   onUpdate(): void {

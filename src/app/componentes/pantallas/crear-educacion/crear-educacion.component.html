@@ -13,28 +13,27 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Institucion</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Titulo</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Link de foto de la institucion</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Periodo</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-                </div>
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                
+                    <label for="titulo" class="form-label">Titulo</label>
+                    <input type="text" class="form-control" id="titulo"
+                    [(ngModel)]="titulo" name="titulo" required>
 
+                    <label for="institucion" class="form-label">Institucion</label>
+                    <input type="text" class="form-control" id="Institucion"
+                    [(ngModel)]="institucion" name="institucion" required>
+                
+                    <label for="periodo" class="form-label">Periodo</label>
+                    <input type="text" class="form-control" id="periodo"
+                    [(ngModel)]="periodo" name="periodo" required>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Crear</button>
+                </div>
+            </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Understood</button>
-            </div>
+            
         </div>
     </div>
 </div>

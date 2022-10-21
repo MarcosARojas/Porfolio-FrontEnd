@@ -21,14 +21,10 @@ export class EdicionExperienciaComponent implements OnInit {
       },
       err => {
         alert("hubo un error por aca");
-        this.router.navigate(['']);
       }
     )
   }
 
-  onUpdate(): void {
-    const id =this.expeLab.id;
-    this.experienciaService.update(id ,this.expeLab)
-  }
+  
 
 }

@@ -13,28 +13,26 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Institucion</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="info anterior">
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                
+                    <label for="tituloEdit" class="form-label">Titulo</label>
+                    <input type="text" class="form-control" id="tituloEdit"
+                     placeholder="info anterior">
+                
+                    <label for="institucionEdit" class="form-label">Institucion</label>
+                    <input type="text" class="form-control" id="institucionEdit"
+                     placeholder="info anterior">
+                
+                    <label for="periodoEdit" class="form-label">Periodo</label>
+                    <input type="text" class="form-control" id="periodoEdit"
+                     placeholder="info anterior">
+                     <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Editar</button>
                 </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Titulo</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="info anterior">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Link de foto de la institucion</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="info anterior">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Periodo</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="info anterior">
-                </div>
-
+            </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Understood</button>
-            </div>
+            
         </div>
     </div>
 </div>

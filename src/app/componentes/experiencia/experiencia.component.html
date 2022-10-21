@@ -28,9 +28,10 @@
         <tr *ngFor="let Experiencia of expe">
           <td>
             <h4>{{Experiencia.puesto}}</h4>
+            <p class="secundario">{{Experiencia.empresa}} </p>
           </td>
           <td>
-            <p class="secundario">{{Experiencia.empresa}} </p>
+           
           </td>
           <td>
             <p class="secundario"> {{Experiencia.descripcion}} </p>
@@ -69,7 +70,7 @@
     BOTON DE editar Educacion
   </button>
 -->
-<!-- Modal -->
+<!-- Modal 
 <div class="modal fade" id="editarExperiencia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
   aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -83,19 +84,23 @@
           <form novalidate #f="ngForm" >
             <div class="">
               <label for="puesto" class="form-label">Puesto</label>
-              <input type="text" class="form-control" id="puesto" placeholder="">
+              <input type="text" class="form-control" id="puesto" placeholder=""
+              [(ngModel)]="expeLab.puesto" required>
             </div>
             <div class="">
               <label for="empresa" class="form-label">Empresa </label>
-              <input type="text" class="form-control" id="empresa" placeholder="">
+              <input type="text" class="form-control" id="empresa" placeholder=""
+              [(ngModel)]="expeLab.empresa" required>
             </div>
             <div class="">
               <label for="descripcion" class="form-label">Descripcion</label>
-              <input type="text" class="form-control" id="descripcion" placeholder="">
+              <input type="text" class="form-control" id="descripcion" placeholder=""
+              [(ngModel)]="expeLab.descripcion" required>
             </div>
             <div class="">
               <label for="periodo" class="form-label">Periodo</label>
-              <input type="text" class="form-control" id="periodo" placeholder="info anterior">
+              <input type="text" class="form-control" id="periodo" placeholder="info anterior"
+              [(ngModel)]="expeLab.periodo" required>
             </div>
 
             <div class="modal-footer">
@@ -109,7 +114,7 @@
 
     </div>
   </div>
-</div>
+</div>-->
 
 <!-- [(ngModel)]="expeLab.descripcion" required
 [(ngModel)]="expeLab.empresa"
