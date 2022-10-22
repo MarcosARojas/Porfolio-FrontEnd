@@ -15,7 +15,7 @@ export class EdicionEducacionComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit(): void {
-    const id = this.activatedRouter.snapshot.params['id'];
+    /*const id = this.activatedRouter.snapshot.params['id'];
     this.educacionService.details(id).subscribe(
       data => {
         this.educacionEdit = data;
@@ -24,11 +24,11 @@ export class EdicionEducacionComponent implements OnInit {
         alert("hubo un error por aca");
         this.router.navigate(['']);
       }
-    )
+    )*/
   }
 
   onUpdate(): void {
-    const id = this.activatedRouter.snapshot.params['id'];
+    /*const id = this.activatedRouter.snapshot.params['id'];
     this.educacionService.update(id, this.educacionEdit).subscribe(
       data=>{
         this.router.navigate(['']);
@@ -36,7 +36,7 @@ export class EdicionEducacionComponent implements OnInit {
         alert("Error al modificar la Educacion");
         this.router.navigate(['']);
       }
-    )
+    )*/
   }
 
 }

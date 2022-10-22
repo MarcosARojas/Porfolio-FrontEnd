@@ -22,12 +22,11 @@ import { CrearExperienciaComponent } from './componentes/pantallas/crear-experie
 import { CrearProyectoComponent } from './componentes/pantallas/crear-proyecto/crear-proyecto.component';
 import { EdicionProyectoComponent } from './componentes/pantallas/edicion-proyecto/edicion-proyecto.component';
 import { InicioUserComponent } from './componentes/pantallas/inicio-user/inicio-user.component';
-import { CrearSkillComponent } from './componentes/pantallas/crear-skill/crear-skill.component';
-import { EdicionSkillComponent } from './componentes/pantallas/edicion-skill/edicion-skill.component';
 import { EdicionInfoUserComponent } from './componentes/pantallas/edicion-info-user/edicion-info-user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { interceptorProvider } from './service/interceptor-service';
 import { AppRouingModule } from './app-routing.module';
+import { CrearSkillComponent } from './componentes/pantallas/crear-skill/crear-skill.component';
 
 
 const routes: Routes = [
@@ -54,10 +53,9 @@ const routes: Routes = [
     EdicionEducacionComponent,
     CrearEducacionComponent,
     CrearExperienciaComponent,
+    CrearSkillComponent,
     CrearProyectoComponent,
     EdicionProyectoComponent,
-    CrearSkillComponent,
-    EdicionSkillComponent,
     EdicionInfoUserComponent,
   ],
   imports: [

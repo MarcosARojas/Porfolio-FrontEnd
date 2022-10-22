@@ -12,38 +12,36 @@
                 <h5 class="modal-title" id="staticBackdropLabel">Agregar Experiencia</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            
-                <div class="modal-body">
-                    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                    
-                        <label for="puesto" >Puesto</label>
-                        <input type="text" class="form-control" id="Puesto"
-                         [(ngModel)]="puesto" name="puesto" required>
-                    
-                    
-                        <label for="empresa" >Empresa</label>
-                        <input type="text" class="form-control" id="Empresa"
-                         [(ngModel)]="empresa" name="empresa" required>
-                    
-                        <label for="periodo" >Periodo</label>
-                        <input type="text" class="form-control" id="periodo"
-                        placeholder="Cargar dd/mm/aa - dd/mm/aa" 
+
+            <div class="modal-body">
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+
+                    <label for="puesto">Puesto</label>
+                    <input type="text" class="form-control" id="Puesto" 
+                    [(ngModel)]="puesto" name="puesto" required>
+
+
+                    <label for="empresa">Empresa</label>
+                    <input type="text" class="form-control" id="Empresa" 
+                    [(ngModel)]="empresa" name="empresa" required>
+
+                    <label for="periodo">Periodo</label>
+                    <input type="text" class="form-control" id="periodo" placeholder="Cargar dd/mm/aa - dd/mm/aa"
                         [(ngModel)]="periodo" name="periodo" equired>
-                    
-                        <label for="descripcion" >Descripcion</label>
-                        <input type="text" class="form-control" id="descripcion"
-                         [(ngModel)]="descripcion" name="descripcion" required>
-                    
+
+                    <label for="descripcion">Descripcion</label>
+                    <input type="text" class="form-control" id="descripcion" 
+                    [(ngModel)]="descripcion"
+                        name="descripcion" required>
+
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         <button type="submit" class="btn btn-primary">Crear</button>
                     </div>
 
                 </form>
-                </div>
-                
+            </div>
+
         </div>
     </div>
 </div>
-
-

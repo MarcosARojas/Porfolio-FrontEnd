@@ -14,7 +14,7 @@ export class EdicionExperienciaComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    const id =this.expeLab.id;
+    /*const id =this.expeLab.id;
     this.experienciaService.details(id).subscribe(
       data => {
         this.expeLab = data;
@@ -22,7 +22,7 @@ export class EdicionExperienciaComponent implements OnInit {
       err => {
         alert("hubo un error por aca");
       }
-    )
+    )*/
   }
 
   

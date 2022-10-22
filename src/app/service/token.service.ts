@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 
 const TOKEN_KEY = 'AuthToken';
@@ -11,7 +12,7 @@ const AUTHORITIES_KEY = 'AuthAuthorities';
 })
 export class TokenService {
   roles: Array<string> = [];
-  URL = 'http://localhost:8080/';
+  URL= environment.URL;
 
 
   constructor() { }
