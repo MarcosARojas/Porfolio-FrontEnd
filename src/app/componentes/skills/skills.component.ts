@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Skill } from 'src/app/Model/skill';
-import { EducacionService } from 'src/app/service/educacion.service';
 import { SkillService } from 'src/app/service/skill.service';
 import { TokenService } from 'src/app/service/token.service';
 
@@ -11,8 +10,9 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class SkillsComponent implements OnInit {
   skill: Skill[] = [];
-  skillEdit: Skill = null;
+  skillEdit?: Skill;
   isLogged = false;
+  nombre: string ='';
 
 
   constructor(private skillService: SkillService,
@@ -24,19 +24,14 @@ export class SkillsComponent implements OnInit {
       this.isLogged = true;
     } else {
       this.isLogged = false;
-    }
-    const id = this.skillEdit.id;
-    this.skillService.details(id).subscribe(
-      data => {
-        this.skillEdit = data;
-      },
-      err => {
-        alert("hubo un error por aca parte 2");
-      }
-    )  
+    } 
+    
   }
   cargarSkill(): void {
-    this.skillService.lista().subscribe(data => { this.skill = data });
+    this.skillService.lista().subscribe(
+      data => { 
+        this.skill = data
+      });
   }
 
   delete(id?: number) {
@@ -52,14 +47,14 @@ export class SkillsComponent implements OnInit {
   }
   details(id?: number) {
     this.skillService.details(id).subscribe(data => { this.skillEdit = data });
-    localStorage.setItem("skillEdit", JSON.stringify(this.skill));
+    localStorage.setItem('id', JSON.stringify(id));
+    console.log(id);
   }
   
 
   onUpdate() {
-    localStorage.getItem("skillEdit", this.skillEdit)
-
-    this.skillService.update(id, this.skillEdit).subscribe(
+    const idEdit = JSON.parse(localStorage.getItem('id'));
+    this.skillService.update(idEdit, this.skillEdit).subscribe(
       data=>{
         alert("Se edito la skill");
         window.location.reload();

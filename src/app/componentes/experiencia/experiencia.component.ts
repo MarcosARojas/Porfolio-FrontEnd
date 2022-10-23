@@ -10,14 +10,11 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class ExperienciaComponent implements OnInit {
   expe: Experiencia[] = [];
-  expeLab: Experiencia = null;
-
-
-  constructor(private experienciaService: ExperienciaService,
-    private tokenService: TokenService) { }
-
+  experienciaEdit?: Experiencia;
   isLogged = false;
 
+  constructor(private experienciaService: ExperienciaService,
+    private tokenService: TokenService,) { }
 
   ngOnInit(): void {
     this.cargarExperiencia();
@@ -28,9 +25,8 @@ export class ExperienciaComponent implements OnInit {
     }
     
   }
-
   cargarExperiencia(): void {
-    this.experienciaService.lista().subscribe(data => { this.expe = data });
+    this.experienciaService.lista().subscribe(data => {this.expe = data});
   }
 
   delete(id?: number) {
@@ -44,14 +40,22 @@ export class ExperienciaComponent implements OnInit {
       )
     }
   }
-
-  /* Metodos extra Revisar */
   details(id?: number) {
-    this.experienciaService.details(id).subscribe(data => { this.expeLab = data });
+    this.experienciaService.details(id).subscribe(data => { this.experienciaEdit = data });
+    localStorage.setItem('idExperiencia', JSON.stringify(id));
+    console.log(id);
   }
+  
 
-  onUpdate(): void {
-    const id = this.expeLab.id;
-    this.experienciaService.update(id, this.expeLab)
-  }
+  onUpdate() {
+    const idEdit = JSON.parse(localStorage.getItem('idExperiencia'));
+    this.experienciaService.update(idEdit, this.experienciaEdit).subscribe(
+      data=>{
+        alert("Se edito la experiencia");
+        window.location.reload();
+      }, err => {
+        alert("Error al modificar la Experiencia");
+      }
+    )}
+  
 }

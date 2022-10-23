@@ -1,6 +1,6 @@
 export class Skill {
     id?: number;
-    nombre: string;
+    nombre: string='';
     porcentaje: number;
 
     constructor(nombre: string, porcentaje: number) {

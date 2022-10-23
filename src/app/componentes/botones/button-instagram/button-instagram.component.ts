@@ -13,7 +13,7 @@ export class ButtonInstagramComponent implements OnInit {
   constructor(public userService: UserService) { }
 
   ngOnInit(): void {
-    this.userService.getUser().subscribe(data => {this.user = data});
+    this.userService.getUser().subscribe(data5 => {this.user = data5});
   }
 
 }

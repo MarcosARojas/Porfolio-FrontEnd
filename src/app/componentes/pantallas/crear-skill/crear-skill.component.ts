@@ -9,7 +9,7 @@ import { SkillService } from 'src/app/service/skill.service';
 })
 export class CrearSkillComponent implements OnInit {
 
-  nombre: string;
+  nombre: string ='';
   porcentaje: number;
 
   constructor(private skillService: SkillService) { }

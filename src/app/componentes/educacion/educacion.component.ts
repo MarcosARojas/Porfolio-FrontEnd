@@ -10,11 +10,11 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class EducacionComponent implements OnInit {
   educacion: Educacion[] = [];
-  educacionEdit: Educacion = null;
+  educacionEdit: Educacion;
   isLogged = false;
-  
+
   constructor(private educacionService: EducacionService,
-    private tokenService: TokenService) { }
+    private tokenService: TokenService,) { }
 
   ngOnInit(): void {
     this.cargarEducacion();
@@ -22,10 +22,10 @@ export class EducacionComponent implements OnInit {
       this.isLogged = true;
     } else {
       this.isLogged = false;
-    }  
+    }
   }
   cargarEducacion(): void {
-    this.educacionService.lista().subscribe(data => { this.educacion = data });
+    this.educacionService.lista().subscribe(data => {this.educacion = data});
   }
 
   delete(id?: number) {
@@ -41,6 +41,20 @@ export class EducacionComponent implements OnInit {
   }
   details(id?: number) {
     this.educacionService.details(id).subscribe(data => { this.educacionEdit = data });
+    localStorage.setItem('idEducacion', JSON.stringify(id));
+    console.log(id);
   }
+  
 
+  onUpdate() {
+    const idEdit = JSON.parse(localStorage.getItem('idEducacion'));
+    this.educacionService.update(idEdit, this.educacionEdit).subscribe(
+      data=>{
+        alert("Se edito la educacion");
+        window.location.reload();
+      }, err => {
+        alert("Error al modificar la Educacion");
+      }
+    )}
+  
 }

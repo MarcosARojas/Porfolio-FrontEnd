@@ -14,7 +14,7 @@ export class CabezeraComponent implements OnInit {
   constructor(public userService: UserService) { }
 
   ngOnInit(): void {
-    this.userService.getUser().subscribe(data => {this.user = data});
+    this.userService.getUser().subscribe(data1 => {this.user = data1});
   }
 
 }

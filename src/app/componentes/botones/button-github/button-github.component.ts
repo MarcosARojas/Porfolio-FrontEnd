@@ -13,7 +13,7 @@ export class ButtonGithubComponent implements OnInit {
   constructor(public userService: UserService) { }
 
   ngOnInit(): void {
-    this.userService.getUser().subscribe(data => {this.user = data});
+    this.userService.getUser().subscribe(data6 => {this.user = data6});
   }
 
 }

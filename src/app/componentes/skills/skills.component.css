@@ -5,3 +5,8 @@
 .bajar {
     padding-bottom: 0;
 }
+
+.transparent {
+    background: rgb(255, 255, 255);
+    
+}

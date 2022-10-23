@@ -15,23 +15,17 @@ import { ButtonFacebookComponent } from './componentes/botones/button-facebook/b
 import { ButtonInstagramComponent } from './componentes/botones/button-instagram/button-instagram.component';
 import { ButtonLinkedinComponent } from './componentes/botones/button-linkedin/button-linkedin.component';
 import { ButtonGithubComponent } from './componentes/botones/button-github/button-github.component';
-import { EdicionExperienciaComponent } from './componentes/pantallas/edicion-experiencia/edicion-experiencia.component';
-import { EdicionEducacionComponent } from './componentes/pantallas/edicion-educacion/edicion-educacion.component';
 import { CrearEducacionComponent } from './componentes/pantallas/crear-educacion/crear-educacion.component';
 import { CrearExperienciaComponent } from './componentes/pantallas/crear-experiencia/crear-experiencia.component';
 import { CrearProyectoComponent } from './componentes/pantallas/crear-proyecto/crear-proyecto.component';
-import { EdicionProyectoComponent } from './componentes/pantallas/edicion-proyecto/edicion-proyecto.component';
 import { InicioUserComponent } from './componentes/pantallas/inicio-user/inicio-user.component';
-import { EdicionInfoUserComponent } from './componentes/pantallas/edicion-info-user/edicion-info-user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { interceptorProvider } from './service/interceptor-service';
 import { AppRouingModule } from './app-routing.module';
 import { CrearSkillComponent } from './componentes/pantallas/crear-skill/crear-skill.component';
 
 
-const routes: Routes = [
-  { path: ':id', component: EdicionExperienciaComponent }
-];
+
 
 @NgModule({
   declarations: [
@@ -48,22 +42,18 @@ const routes: Routes = [
     ButtonInstagramComponent,
     ButtonLinkedinComponent,
     ButtonGithubComponent,
-    EdicionExperienciaComponent,
     InicioUserComponent,
-    EdicionEducacionComponent,
     CrearEducacionComponent,
     CrearExperienciaComponent,
     CrearSkillComponent,
     CrearProyectoComponent,
-    EdicionProyectoComponent,
-    EdicionInfoUserComponent,
   ],
   imports: [
     BrowserModule,
     AppRouingModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule
   ],
   providers: [ interceptorProvider ],
   bootstrap: [AppComponent]
