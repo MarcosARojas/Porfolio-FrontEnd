@@ -1,10 +1,16 @@
-<div class="grid text-center container img-banner separador-superior" style="background-image: url({{user.urlBanner}});">
-  <div class="g-col-6"><div class="row ">
-    <div class="col espaciador"><img class="img-user" src={{user.urlPerfil}} alt="Portada user"></div>
-    <div class="grid text-center" style="--bs-columns: 18; --bs-gap: .5rem;">
-      <div style="grid-column: span 14;"><div class="col letra-banner"> <p>{{user.apellido}} {{user.nombre}} </p> </div>
-      <div class="col"> </div>
-      <div class="col letra-banner"> <p> {{user.titulo}} </p> </div>
-      <div class="col"> </div></div>
+<div class="grid text-expas container img-banner separador-superior fondoConteiner" ngClass="degradado">
+  <div class="row ">
+    <div class="col-4 align-self-center">
+      <img class="img-user" src={{user.urlPerfil}} alt="Portada user">
     </div>
+    <div class="col-6 align-self-center letra-banner" >
+      <div><h1>{{user.apellido}} {{user.nombre}} </h1></div>
+      <div><h2>{{user.titulo}} </h2></div>
+        <div>
+          <div><p> ¿Quieres mas informacion de como trabajo o agendar una reunion conmigo? Podes contactarte por estos medios</p></div>
+          <div><p> Email: {{user.email}}</p></div>
+          <div><p> Celular: +4</p></div>
+        </div>
+    </div>
+  </div>
 </div>
