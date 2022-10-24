@@ -8,14 +8,14 @@ export class user{
     descripcion: String;
     urlPerfil: String;
     urlBanner: String;
-    ulinkedin: String;
-    uinstagram: String;
-    ufacebook: String;
-    ugithub: String;
+    uLinkedin: String;
+    uInstagram: String;
+    uFacebook: String;
+    uGitHub: String;
 
     constructor(nombre: String, apellido: String,email: String, titulo: String, descripcion: String,
-            urlPerfil: String, urlBanner: String, ulinkedin: String,
-            uinstagram: String, ufacebook: String, ugithub: String){
+            urlPerfil: String, urlBanner: String, uLinkedin: String,
+            uInstagram: String, uFacebook: String, uGitHub: String){
                 this.nombre = nombre;
                 this.apellido = apellido;
                 this.email = email;
@@ -23,9 +23,9 @@ export class user{
                 this.descripcion = descripcion;
                 this.urlPerfil = urlPerfil;
                 this.urlBanner = urlBanner;
-                this.ulinkedin = ulinkedin;
-                this.uinstagram = uinstagram;
-                this.ufacebook = ufacebook;
-                this.ugithub = ugithub;
+                this.uLinkedin = uLinkedin;
+                this.uInstagram = uInstagram;
+                this.uFacebook = uFacebook;
+                this.uGitHub = uGitHub;
             }
 }

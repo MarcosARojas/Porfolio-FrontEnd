@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  URL: 'http://localhost:8080/', 
+  URL: 'https://backendprm.herokuapp.com/', 
   //URL: 'aca iria el url del servidor'
 };
 

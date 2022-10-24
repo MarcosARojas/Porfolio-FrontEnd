@@ -17,7 +17,6 @@ import { ButtonLinkedinComponent } from './componentes/botones/button-linkedin/b
 import { ButtonGithubComponent } from './componentes/botones/button-github/button-github.component';
 import { CrearEducacionComponent } from './componentes/pantallas/crear-educacion/crear-educacion.component';
 import { CrearExperienciaComponent } from './componentes/pantallas/crear-experiencia/crear-experiencia.component';
-import { CrearProyectoComponent } from './componentes/pantallas/crear-proyecto/crear-proyecto.component';
 import { InicioUserComponent } from './componentes/pantallas/inicio-user/inicio-user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { interceptorProvider } from './service/interceptor-service';
@@ -46,7 +45,6 @@ import { CrearSkillComponent } from './componentes/pantallas/crear-skill/crear-s
     CrearEducacionComponent,
     CrearExperienciaComponent,
     CrearSkillComponent,
-    CrearProyectoComponent,
   ],
   imports: [
     BrowserModule,

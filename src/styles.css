@@ -23,18 +23,11 @@ body {
     margin-bottom: 0.5em;
 }
 .fondo{
-    background: -webkit-linear-gradient(left top, rgb(223, 95, 20, 0.75) , rgb(65, 210, 200, 0.75))
+    background: -webkit-linear-gradient(left top, rgba(0, 153, 41, 0.75), rgb(39, 162, 223, 0.75))
+    
+}
+.degradado{
+    background:  -webkit-linear-gradient(top, rgba(99, 160, 113, 0.75),rgba(98, 152, 182, 0.75) );
 }
 
-.fondoADU{
-    background:  -webkit-linear-gradient(left top, rgb(223, 95, 20, 0.75) , rgba(233, 145, 74, 0.9));
-}
-.fondoExpe{
-    background:  -webkit-linear-gradient(left top, rgb(65, 210, 200, 0.75) ,rgba(132, 241, 236, 0.5));
-}
-.fondoEdu{
-    background:  -webkit-linear-gradient(left top, rgb(223, 95, 20, 0.75) , rgba(233, 145, 74, 0.9));
-}
-.fondoS{
-    background:  -webkit-linear-gradient(left top, rgb(65, 210, 200, 0.75) ,rgba(132, 241, 236, 0.5));
-}
+

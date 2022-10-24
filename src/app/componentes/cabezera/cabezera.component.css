@@ -30,13 +30,13 @@
     -webkit-text-stroke: 1px #000000;
 }
 h1{
-    font: 2.2em sans-serif;
+    font: 2.25em sans-serif;
 }
 h2{
-    font: 1.5em sans-serif;
+    font: 1.75em sans-serif;
 }
 p{
-    font: 1.2em sans-serif;
+    font: 1.3em sans-serif;
 }
 .separador-superior {
     margin-top: 1em;
@@ -53,13 +53,11 @@ p{
     background-color: #00000000;
     border-color: #4f4f4f00;
 }
-.degradado {
+.degradado2 {
     background: -webkit-linear-gradient(left top, rgb(223, 95, 20) , rgb(65, 210, 200))
 }
 
 .izquierda {
     margin-left: 2em;
 }
-.degradado2 {
-    background: -webkit-linear-gradient(left top, rgb(255, 200, 170, 0.75) , rgb(220, 200, 255, 0.75))
-}
+
